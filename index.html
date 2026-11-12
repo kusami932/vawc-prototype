@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Virginia Works · Career & employment services</title>
+  <meta name="description" content="An interactive student redesign of Virginia Workforce Connection for career exploration, training, and job comparison.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="site-shell">
+    <header class="masthead">
+      <button class="menu-button" id="menu-button" aria-label="Open service menu"><span aria-hidden="true">☰</span>Menu</button>
+      <a class="brand" href="#home" aria-label="Virginia Works home">
+        <svg viewBox="0 0 54 60" aria-hidden="true"><path fill="#123f79" d="M2 12h15l24 44H27z"/><path fill="#1276ad" d="M17 12h7l18 32-1 12z"/><path fill="#ad2431" d="m44 3 9-3-12 49-7-13z"/><path fill="#de9e21" d="m38 0 4 9-9 28-4-7z"/><path fill="#32754c" d="m29 0 3 11-6 16-4-10z"/></svg>
+        <span>VIRGINIA<strong>WORKS</strong></span>
+      </a>
+      <div class="header-actions"><button class="link-button" data-dialog="help">Help Center</button><span class="divider"></span><button class="link-button" data-dialog="signin">Sign In</button></div>
+    </header>
+    <nav class="utility-nav" aria-label="Main navigation"><a href="#home">⌂ <span>Home</span></a><button data-unavailable="Dashboard">◷ <span>Dashboard</span></button><button data-dialog="alerts">△ <span>Alerts</span></button><button data-dialog="accessibility">◉ <span>Accessibility</span></button></nav>
+    <main id="main" tabindex="-1"></main>
+    <footer><div><a href="#home">Home</a><button data-dialog="about">About</button><button data-dialog="accessibility">Accessibility</button><button data-dialog="privacy">Privacy</button><button data-unavailable="Contact">Contact</button></div><small>Student design prototype · Sample listings and training information</small><a class="review-link" href="review.html" target="_blank" rel="noopener">Evaluation materials</a></footer>
+  </div>
+  <div id="announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  <dialog id="dialog"><div id="dialog-content"></div><form method="dialog"><button class="button secondary">Close</button></form></dialog>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

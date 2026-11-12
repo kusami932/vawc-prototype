@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ICA8 evaluation guide · VAWC prototype</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .review-shell{max-width:1120px}.review-header{padding:25px 34px;background:var(--pale);border-bottom:1px solid var(--border)}.review-header p{margin:6px 0 0}.review-content{max-width:1040px}.review-content section{margin:30px 0}.review-content li{margin-bottom:8px}.review-content blockquote{margin:0;padding:22px;border-left:5px solid var(--blue);background:#eef6fc;font-size:18px;line-height:1.6}.review-content h2{margin-bottom:12px}.review-content .checks-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.heuristic{border:1px solid var(--border);border-radius:5px;padding:18px;background:#fff}.heuristic h3{font-size:17px}.heuristic p:last-child{margin-bottom:0}.review-content .task-line{border-top:1px solid #d4e0e9;padding-top:15px}.review-content .criteria-label{margin-top:28px}.review-content .review-nav{display:flex;gap:20px;flex-wrap:wrap;margin-top:16px}.review-content .review-nav a{font-size:14px}.review-content .status-message{margin-top:12px;color:#8a1b1b}.review-content .status-message:empty{display:none}@media(max-width:700px){.review-content .checks-grid{grid-template-columns:1fr}.review-header{padding:22px 18px}}@media print{body{padding:0;background:white}.review-shell{border:0}.review-header .actions,.review-nav,#reset-help,#reset-status{display:none}.review-content{padding:15px}.heuristic{break-inside:avoid}.review-content section{margin:20px 0}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#review-main">Skip to evaluation guide</a>
+  <div class="site-shell review-shell">
+    <header class="review-header">
+      <h1>ICA8 heuristic evaluation</h1>
+      <p>Evaluator materials for the VAWC redesign prototype</p>
+      <div class="actions" style="margin-top:18px">
+        <a class="button" href="index.html#home">Open prototype</a>
+        <a class="button secondary" href="HE-observation-template.csv" download>Download observation template</a>
+        <button class="button secondary" type="button" id="reset-prototype">Reset prototype</button>
+      </div>
+      <p class="small muted" id="reset-help">Reset clears this prototype’s saved searches and selections in this browser, then opens the homepage.</p>
+      <p class="status-message" id="reset-status" role="status" aria-live="polite"></p>
+    </header>
+    <main id="review-main" class="review-content">
+      <p lang="ko">평가자는 홈페이지에서 시작해 과제를 직접 수행하고, 아래 기준에 따라 관찰 내용을 기록하면 됩니다. 이번 집중 평가 범위인 <strong>BT1 C–D는 전체 BT1의 일부</strong>입니다. 체크 항목은 실제 평가 결과가 아니라 검토할 질문입니다.</p>
+      <nav class="review-nav" aria-label="Evaluation guide sections"><a href="#scope">Scope</a><a href="#prompt">Task prompt</a><a href="#criteria">Heuristics</a><a href="#recording">Recording findings</a><a href="#p4">P4 follow-up</a></nav>
+
+      <section id="scope" aria-labelledby="scope-title">
+        <h2 id="scope-title">Review scope and setup</h2>
+        <p><strong>Suggested ICA8 focus: BT1 C–D.</strong> Start at the homepage, search for two jobs, compare them, choose one, and identify its application next step. The intended user is a job seeker in user class JS1.</p>
+        <p class="task-line"><strong>The full BT1:</strong> A — explore an administrative occupation; B — investigate a relevant training organization; C — compare two openings; D — choose an opening and identify how to apply. A C–D review alone does not establish completion of all four outcomes.</p>
+        <ul>
+          <li>Start signed out with no prior selections. Use the reset button between evaluators.</li>
+          <li>Record evaluator ID, review date, prototype version, device/browser, and inspected scope.</li>
+          <li>Jobs and training records are demonstration data. Do not create an account, enroll, or submit an application.</li>
+          <li>Peripheral routes may show “not implemented.” Distinguish these documented limits from defects in the core task.</li>
+        </ul>
+        <p class="small muted">The supplied ICA8 preparation slide asks for at least five Nielsen heuristics, two original heuristics, and an interactive prototype. It does not specify evaluator count, severity grading, recording submission, or submission format. Follow any additional instructions given in class.</p>
+      </section>
+
+      <section id="prompt" aria-labelledby="prompt-title">
+        <h2 id="prompt-title">Task prompt: job search and comparison</h2>
+        <blockquote>You are looking for full-time administrative work within 25 miles of Richmond, Virginia. You prefer daytime work and pay of at least $19 per hour, or comparable annual pay. Find two relevant openings and compare their location, pay, schedule, and qualifications. Choose the opening you would investigate first, explain your choice and anything you still need to confirm, and find the next step toward applying. Stop before signing in, creating an account, or submitting anything.</blockquote>
+        <p class="small muted" style="margin-top:12px">Provide the prompt without demonstrating the ideal route or naming buttons. Missing pay or schedule information must remain unconfirmed; it should not be treated as evidence that the job meets the preference.</p>
+        <details class="disclosure"><summary>Extend the review to all of BT1</summary><div class="disclosure-content"><p>Also ask the evaluator to identify an administrative occupation and explain relevant duties and skills, then find a potentially relevant training organization and distinguish evidence of relevance from unconfirmed course availability. Record the reviewed scope as BT1 A–D.</p></div></details>
+      </section>
+
+      <section id="criteria" aria-labelledby="criteria-title">
+        <h2 id="criteria-title">Seven Nielsen heuristics</h2>
+        <p class="intro">Use these questions to inspect the design. F01–F06 refer to the revised P3 usability issues.</p>
+        <div class="checks-grid">
+          <article class="heuristic"><h3>H1 · Visibility of system status</h3><p>After editing location or filters, is it clear whether changes are pending or applied? Do results show the active area and radius? Is the number of selected jobs visible?</p><p class="small muted">P3: F03, F05</p></article>
+          <article class="heuristic"><h3>H2 · Match between system and the real world</h3><p>Do labels distinguish an occupation from a vacancy and a provider from a program? Are search scope, pay units, and schedule labels understandable to a job seeker?</p><p class="small muted">P3: F02, F04, F05</p></article>
+          <article class="heuristic"><h3>H3 · User control and freedom</h3><p>Can users edit criteria, clear filters, deselect comparisons, return from details, and leave the application step without losing necessary context?</p><p class="small muted">P3: F03, F05, F06</p></article>
+          <article class="heuristic"><h3>H4 · Consistency and standards</h3><p>Do shared navigation, labels, buttons, selected tabs, and pending/applied states work consistently across occupation, training, and job views?</p><p class="small muted">P3: F02, F03, F04</p></article>
+          <article class="heuristic"><h3>H5 · Error prevention</h3><p>Are optional criteria distinguishable? Are invalid values explained before results update? Is comparison selection clear? Is the application destination identified before proceeding?</p><p class="small muted">P3: F01, F03, F05, F06</p></article>
+          <article class="heuristic"><h3>H6 · Recognition rather than recall</h3><p>Are labels and examples visible while typing? Can users compare employer, location, pay, schedule, and qualifications on one screen without remembering another browser tab?</p><p class="small muted">P3: F02, F05</p></article>
+          <article class="heuristic"><h3>H8 · Aesthetic and minimalist design</h3><p>Are common criteria prominent and specialized options grouped in expandable sections? Is the primary action easy to find without hiding necessary information?</p><p class="small muted">P3: F01, F06</p></article>
+        </div>
+        <h2 class="criteria-label">Two project-specific heuristics</h2>
+        <div class="checks-grid">
+          <article class="heuristic"><h3>D1 · Evidence-aware career decisions</h3><p>Are full pay ranges preserved rather than implying a guaranteed maximum? Are missing pay and schedule shown as unknown? Is a training provider’s general relevance distinguished from current course enrollment availability?</p><p class="small muted">P3: F04, F05</p></article>
+          <article class="heuristic"><h3>D2 · Distinct objects and useful next steps</h3><p>Can users tell whether they are viewing an occupation, opening, organization, or program? Do related links preserve useful context? Does the application action identify the actual next step rather than a generic employer homepage?</p><p class="small muted">P3: F04, F06</p></article>
+        </div>
+      </section>
+
+      <section id="recording" aria-labelledby="recording-title">
+        <h2 id="recording-title">Record observable findings</h2>
+        <ol>
+          <li>Inspect independently before discussing findings. First review the overall task flow, then examine details, edits, alternative routes, empty results, and error recovery.</li>
+          <li>Record one distinct issue per template row: screen, action, observed behavior, heuristic, effect, proposed fix, and status. Add a screenshot reference where helpful.</li>
+          <li>Consolidate duplicates after independent reviews, retaining evaluator IDs and evidence. Record changes and verify them in the revised prototype.</li>
+        </ol>
+        <p><a href="HE-observation-template.csv" download>Download the blank CSV observation template</a>. It contains 12 blank rows and can be extended. No evaluation findings are prefilled.</p>
+        <details class="disclosure"><summary>Optional severity and status conventions</summary><div class="disclosure-content"><p>This is an optional team convention, not a severity scheme specified in the supplied ICA8 slide: <strong>0</strong> = no issue after review; <strong>1</strong> = cosmetic; <strong>2</strong> = minor difficulty with an easy workaround; <strong>3</strong> = major difficulty or substantial extra effort; <strong>4</strong> = prevents an essential task outcome. Explain each rating from the observed effect.</p><p>Suggested status values: New, Needs clarification, Accepted, Deferred, Fixed, Verified, or Not an issue. Use Verified only after checking the change.</p></div></details>
+        <p class="small muted">Heuristic evaluation produces expert assessments. These observations are not new participant completion rates, error counts, or satisfaction scores for the P2 baseline.</p>
+      </section>
+
+      <section id="p4" aria-labelledby="p4-title">
+        <h2 id="p4-title">Carry the review into P4</h2>
+        <p>Preserve the evaluated version. For each accepted finding, keep the original evidence, the change, its rationale, and before/after screenshots. Document tools, instructor/TA and peer feedback, AI use and supplied P3 artifacts, and limitations that could affect comparison with baseline measurements.</p>
+        <p>P4 requires a happy-path recording for each benchmark task, linked to the UX Target table. A full BT1 recording should cover A–D; a C–D recording should be labeled as a partial route. The supplied ICA8 preparation slide does not itself require these recordings.</p>
+        <div class="actions"><a class="button" href="index.html#home">Open prototype</a><a href="#review-main">Back to top</a></div>
+      </section>
+    </main>
+    <footer>ICA8 preparation materials · VAWC redesign · No evaluation results recorded yet.</footer>
+  </div>
+  <script>
+    document.getElementById('reset-prototype').addEventListener('click', function () {
+      try {
+        localStorage.removeItem('vawc-p4-v1');
+        window.location.href = 'index.html#home';
+      } catch (error) {
+        document.getElementById('reset-status').textContent = 'Saved state could not be cleared in this browser. Open the prototype in a fresh private window to start a new review.';
+      }
+    });
+  </script>
+</body>
+</html>
